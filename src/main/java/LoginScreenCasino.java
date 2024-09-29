@@ -40,7 +40,9 @@ public class LoginScreenCasino extends Application {
 
         /* This is still a work in progress as I'm still to figure out the code for input validation and
         I don't have my sign-up process completed but this code below is my first event which simply tells the user
-        to input both a username and passowrd. I've set up some structure for getting to the next page.
+        to input both a username and passowrd. I've set up some structure for getting to the next page. I wanted to
+        set up the data base for the username and password before I used an event to direct the user to the welcome screen
+        that's why I don't have that setup yet.
         I used the following stackoverflow page to help me with this section: https://stackoverflow.com/questions/44147153/javafx-validation-user-input-username-password
 
          */

@@ -30,13 +30,33 @@ public class LoginScreenCasino extends Application {
         PasswordField passField = new PasswordField();
         Button loginButton = new Button("Log In");
 
-        /* This just adds some style to make the font look better I used the following stackoveflow
+        /* This just adds some style to make the font look better I used this stackoveflow
         page to help me wit this
         https://stackoverflow.com/questions/21385117/using-both-css-and-setstyle
          */
         userLabel.setStyle("-fx-font-size: 14px;");
         passLabel.setStyle("-fx-font-size: 14px;");
         loginButton.setStyle("-fx-background-color: #db8535; -fx-text-fill: white;");
+
+        /* This is still a work in progress as I'm still to figure out the code for input validation and
+        I don't have my sign-up process completed but this code below is my first event which simply tells the user
+        to input both a username and passowrd. I've set up some structure for getting to the next page.
+        I used the following stackoverflow page to help me with this section: https://stackoverflow.com/questions/44147153/javafx-validation-user-input-username-password
+
+         */
+        loginButton.setOnAction(event -> {
+            String username = userField.getText().trim();
+            String password = passField.getText().trim();
+
+            //Checks if the username is empty and the user try's to log in
+            if (username.isEmpty() || password.isEmpty()) {
+                System.out.println("Please enter both username and password.");
+            } else {
+                    // I'm going to eventaully implement more logic in this portion to actually login
+                System.out.printf("Attempting to log in with username: %s%n", username);
+
+            }
+        });
 
         //Sets the userlabels in place
         grid.add(userLabel, 0, 0);
